@@ -1,4 +1,4 @@
-package Builder;
+package Builder.withOuter;
 
 public class Student {
     int age;
@@ -25,8 +25,9 @@ public class Student {
 
 //    Student(AuthorName,BookName,ccc, , , )
 
-        static StudentBuilder getBuilder(){
-            return new StudentBuilder();
-        }
-
+    static StudentBuilder getBuilder(){
+        return new StudentBuilder();
+    }
 }
+
+// 10:21pm to 10:28pm;

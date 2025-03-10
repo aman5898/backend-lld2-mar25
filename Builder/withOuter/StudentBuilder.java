@@ -1,4 +1,4 @@
-package Builder;
+package Builder.withOuter;
 
 public class StudentBuilder {
     int age;

@@ -1,4 +1,4 @@
-package Builder;
+package Builder.withInner;
 
 public class Client {
     public static void main(String[] args) {
@@ -30,11 +30,18 @@ public class Client {
 //        Student st = new Student(sb);
 
 
+//        Student st = Student.getBuilder()
+//                .setAge(25)
+//                .setGradyear(2025)
+//                .setBatch("Jan 2025")
+//                .build();
+
         Student st = Student.getBuilder()
                 .setAge(25)
                 .setGradyear(2025)
                 .setBatch("Jan 2025")
                 .build();
+
 
     }
 }
