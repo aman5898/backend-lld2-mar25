@@ -15,6 +15,6 @@ public class Pigeon extends BirdV5 implements Flyable {
 
     @Override
     public void fly() {
-        fl.makeFly();
+        fh.makeFly();
     }
 }
