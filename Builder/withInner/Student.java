@@ -7,9 +7,7 @@ public class Student {
     int gradyear;
     String course;
 
-    Student(StudentBuilder builder){
-
-
+    private Student(StudentBuilder builder){
 
         if(builder.course!=null){
             this.course = builder.course;

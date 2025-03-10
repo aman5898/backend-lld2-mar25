@@ -22,7 +22,7 @@ public class Client {
 //        Student st = new Student(sb);
 
 
-//        StudentBuilder sb = Student.getBuilder()
+//        Student.StudentBuilder sb = Student.getBuilder()
 //                .setAge(25)
 //                .setGradyear(2025)
 //                .setBatch("Jan 2025");
@@ -41,6 +41,16 @@ public class Client {
                 .setGradyear(2025)
                 .setBatch("Jan 2025")
                 .build();
+
+
+
+//                Student.StudentBuilder sb = Student.getBuilder()
+//                .setAge(25)
+//                .setGradyear(2025)
+//                .setBatch("Jan 2025");
+//
+//        Student st = new Student(sb);
+
 
 
     }
