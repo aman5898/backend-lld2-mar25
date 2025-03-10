@@ -7,23 +7,46 @@ public class StudentBuilder {
     int gradyear;
     String course;
 
-    public void setAge(int age) {
+    public StudentBuilder setAge(int age) {
         this.age = age;
+        return this;
     }
 
-    public void setBatch(String batch) {
+    public StudentBuilder setBatch(String batch) {
         this.batch = batch;
+        return this;
     }
 
-    public void setCourse(String course) {
+    public StudentBuilder setCourse(String course) {
         this.course = course;
+        return this;
     }
 
-    public void setName(String name) {
+    public StudentBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
-    public void setGradyear(int gradyear) {
+    public StudentBuilder setGradyear(int gradyear) {
         this.gradyear = gradyear;
+        return this;
+    }
+
+    public Student build(){
+
+        // validations
+        if(this.age<10){
+            throw new IllegalArgumentException("Age must be atleast 10");
+        }
+
+        if(this.gradyear>2024){
+            throw new IllegalArgumentException("GradYear must smaller than 2024");
+        }
+
+        if(this.name==null){
+            throw new IllegalArgumentException("Name can't be empty");
+        }
+
+        return new Student(this);
     }
 }

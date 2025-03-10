@@ -9,21 +9,24 @@ public class Student {
 
     Student(StudentBuilder builder){
 
-        // validations
-        if(builder.age<10){
-            throw new IllegalArgumentException("Age must be atleast 10");
-        }
 
-        if(builder.gradyear>2024){
-            throw new IllegalArgumentException("GradYear must smaller than 2024");
+
+        if(builder.course!=null){
+            this.course = builder.course;
+        }else{
+            this.course="Academy";
         }
 
         this.age = builder.age;
         this.name = builder.name;
         this.gradyear = builder.gradyear;
-        this.course = builder.course;
         this.batch = builder.batch;
     }
 
+//    Student(AuthorName,BookName,ccc, , , )
+
+        static StudentBuilder getBuilder(){
+            return new StudentBuilder();
+        }
 
 }
