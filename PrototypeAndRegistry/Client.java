@@ -8,14 +8,30 @@ public class Client {
 //        Student st2 = s;
     }
 
-    public static void main(String[] args) {
+
+    public static void fillRegistry(StudentRegistry studentRegistry){
         Student st = new Student();
         st.batch = "Test";
         st.name = "ScalerStudent";
+        studentRegistry.register("Student",st);
 
-//        doSomething(st);
+        IntelligentStudent is =  new IntelligentStudent();
+        studentRegistry.register("IntelligentStudent",is);
+    }
 
-        IntelligentStudent ist = new IntelligentStudent();
-        doSomething(ist);
+    public static void main(String[] args) {
+//        Student st = new Student();
+//        st.batch = "Test";
+//        st.name = "ScalerStudent";
+//
+////        doSomething(st);
+//
+//        IntelligentStudent ist = new IntelligentStudent();
+//        doSomething(ist);
+
+        StudentRegistry studentRegistry = new StudentRegistry();
+        fillRegistry(studentRegistry);
+
+        Student ist = (Student)studentRegistry.get("Student");
     }
 }
