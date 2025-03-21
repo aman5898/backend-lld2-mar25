@@ -7,8 +7,8 @@ public class Mocha extends AddOn{
 
     @Override
     public int getCost() {
-//        return this.b.getCost() + 20;
-        return  200;
+        return this.b.getCost() + 20;
+//        return  200;
     }
 
     @Override
